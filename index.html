@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAR - Vasos, Alcohol y Retos | El Alma de la Previa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #050505; 
+            color: white; 
+            font-family: 'Inter', sans-serif; 
+            scroll-behavior: smooth;
+        }
+        .ecuador-border {
+            border-bottom: 4px solid;
+            border-image: linear-gradient(to right, #FFDD00 33%, #0033A0 33% 66%, #ED1C24 66%) 1;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at center, rgba(0, 255, 0, 0.15) 0%, transparent 70%);
+        }
+        .btn-kickoff {
+            background: linear-gradient(90deg, #FFDD00 0%, #0033A0 50%, #ED1C24 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-kickoff:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 221, 0, 0.4);
+        }
+        .floating-wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="p-5 flex justify-between items-center bg-black/90 backdrop-blur-md sticky top-0 z-50 ecuador-border">
+        <div class="flex items-center gap-2">
+            <span class="text-3xl font-black italic text-yellow-400">VAR</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-bold uppercase text-sm tracking-widest">
+            <a href="#inicio" class="hover:text-yellow-400">Inicio</a>
+            <a href="#como-jugar" class="hover:text-yellow-400">Reglas</a>
+            <a href="#tienda" class="hover:text-yellow-400">Comprar</a>
+        </div>
+        <a href="https://wa.me/593900000000?text=Hola!%20Quiero%20el%20combo%20de%20VAR%20para%20la%20previa" class="bg-white text-black px-6 py-2 rounded-full font-black text-xs uppercase hover:bg-yellow-400 transition-colors">
+            Pide ahora
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-glow min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20">
+        <div class="inline-block mb-4 px-4 py-1 border border-red-500 rounded-full">
+            <span class="text-red-500 text-xs font-bold uppercase tracking-[0.2em]">Tarjeta Roja al Aburrimiento</span>
+        </div>
+        
+        <h1 class="text-6xl md:text-9xl font-black italic uppercase leading-none mb-6">
+            ¡EL ALMA DE<br><span class="text-yellow-400">LA PREVIA!</span>
+        </h1>
+        
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-10">
+            Adivina al jugador oculto o prepárate para el shot. El juego diseñado para los hinchas que no perdonan una falta.
+        </p>
+
+        <div class="relative mb-12" id="tienda">
+            <!-- Reemplaza 'logo.png' con el nombre de tu archivo de imagen subido a GitHub -->
+            <img src="logo.png" alt="VAR Juego de Mesa" class="w-72 md:w-96 drop-shadow-[0_0_50px_rgba(255,221,0,0.3)]">
+            <div class="absolute -top-5 -right-5 bg-yellow-400 text-black font-black text-3xl p-4 rounded-full rotate-12">
+                $10
+            </div>
+        </div>
+
+        <a href="https://wa.me/593900000000?text=Hola!%20Quiero%20el%20VAR%20para%20mi%20reunion" class="btn-kickoff px-12 py-5 rounded-full font-black text-xl uppercase italic">
+            ¡Lo quiero ya!
+        </a>
+        
+        <p class="mt-6 text-xs text-gray-500 uppercase tracking-widest">Envíos rápidos en Quito y Valles</p>
+    </section>
+
+    <!-- Reglas / Cómo Jugar -->
+    <section id="como-jugar" class="py-24 bg-zinc-950 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-black text-center mb-16 uppercase italic">Reglamento del Campo</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 p-8 rounded-3xl border-t-4 border-yellow-400">
+                    <span class="text-5xl mb-4 block">🟨</span>
+                    <h3 class="text-2xl font-bold mb-3">Tarjeta Amarilla</h3>
+                    <p class="text-gray-400">Si fallas una pregunta o cometes una falta leve: <strong>Medio Shot</strong>.</p>
+                </div>
+                
+                <div class="bg-zinc-900 p-8 rounded-3xl border-t-4 border-red-600">
+                    <span class="text-5xl mb-4 block">🟥</span>
+                    <h3 class="text-2xl font-bold mb-3">Tarjeta Roja</h3>
+                    <p class="text-gray-400">Si tu oponente adivina tu jugador o fallas tu intento: <strong>Shot Completo</strong>.</p>
+                </div>
+                
+                <div class="bg-zinc-900 p-8 rounded-3xl border-t-4 border-green-500">
+                    <span class="text-5xl mb-4 block">🏆</span>
+                    <h3 class="text-2xl font-bold mb-3">Perdedor</h3>
+                    <p class="text-gray-400">El que se queda fuera del mundial paga la condena con <strong>2 Shots finales</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entregas Locales (Personalizado para tus targets) -->
+    <section class="py-20 border-t border-zinc-800 text-center">
+        <h3 class="text-sm font-bold text-gray-500 uppercase mb-8 tracking-[0.5em]">Entregas Presenciales</h3>
+        <div class="flex flex-wrap justify-center gap-8 opacity-50 grayscale">
+            <span class="font-black text-xl italic">EPN</span>
+            <span class="font-black text-xl italic">UPS</span>
+            <span class="font-black text-xl italic">PUCE</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6 border-t border-zinc-900 text-center">
+        <p class="text-gray-600 text-sm mb-4">© 2026 VAR (Vasos, Alcohol y Retos). Quito, Ecuador.</p>
+        <div class="flex justify-center gap-6">
+            <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+            <a href="#" class="text-gray-400 hover:text-white">TikTok</a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/593900000000" class="floating-wa hover:scale-110 transition-transform">
+        <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607zM7.994 14.52a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
